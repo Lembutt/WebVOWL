@@ -3,7 +3,6 @@ version: '3'
 services:
     
     server:
-        build: .
-        command: catalina.sh run
+        image: lembutt/webvowl-glossary:latest
         ports:
-            - 8080:8080
+            - 33722:8000

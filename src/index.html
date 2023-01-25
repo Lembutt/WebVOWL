@@ -539,6 +539,20 @@
 <script src="js/d3.min.js"></script>
 <script src="js/webvowl.js"></script>
 <script src="js/webvowl.app.js"></script>
-<script>window.onload = webvowl.app().initialize;</script>
+<script>
+    console.log('Hello World!')
+    window.onload = () => {
+        webvowl.app().initialize();
+        fetch('https://1203309-ch49850.tw1.ru/owl.json')
+            .then(res => {return res.json()})
+            .then(ontology => {
+                webvowl
+                    .opts
+                    .loadingModule()
+                    .directInput(JSON.stringify(x))
+                }) 
+        fetch()
+    };
+</script>
 </body>
 </html>
