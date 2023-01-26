@@ -543,7 +543,8 @@
     console.log('Hello World!')
     window.onload = () => {
         webvowl.app().initialize();
-        fetch('https://1203309-ch49850.tw1.ru/owl.json')
+        setTimeout(() => {
+            fetch('https://1203309-ch49850.tw1.ru/owl.json')
             .then(res => {return res.json()})
             .then(ontology => {
                 webvowl
@@ -551,6 +552,8 @@
                     .loadingModule()
                     .directInput(JSON.stringify(ontology))
                 }) 
+        }, 2000)
+
     };
 </script>
 </body>
