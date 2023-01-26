@@ -544,7 +544,7 @@
     window.onload = () => {
         webvowl.app().initialize();
         setTimeout(() => {
-            fetch('http://localhost/owl.json')
+            fetch('http://localhost:33723/owl.json')
             .then(res => {return res.json()})
             .then(ontology => {
                 webvowl
