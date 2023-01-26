@@ -544,7 +544,7 @@
     window.onload = () => {
         webvowl.app().initialize();
         setTimeout(() => {
-            fetch('https://1203309-ch49850.tw1.ru/owl.json')
+            fetch(process.env.ONTOLOGY_URL)
             .then(res => {return res.json()})
             .then(ontology => {
                 webvowl
